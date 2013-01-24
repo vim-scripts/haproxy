@@ -18,12 +18,6 @@ func! Foldexpr_haproxy(lnum)
     if l1 =~ '^\s*#*\s*\(global\|defaults\|frontend\|backend\|listen\)'
         " current line is blank (level 1 end)
         return '>1'
-    elseif  l0 =~ '^\s*#*\s*\(global\|defaults\|frontend\|backend\|listen\)'
-        " previous line is global (level 1)
-        return '1'
-    elseif l1 =~ '^$'
-        " current line is blank (level 1 end)
-        return '<1'
     else
         " keep previous foldlevel
         return '='
