@@ -15,7 +15,7 @@ func! Foldexpr_haproxy(lnum)
 
     let l1 = getline(a:lnum)
 
-    if l1 =~ '^\s*#*\s*\(global\|defaults\|frontend\|backend\|listen\)'
+    if l1 =~ '^\s*#*\s*\(global\|defaults\|frontend\|backend\|listen\|ruleset\)'
         " current line is blank (level 1 end)
         return '>1'
     else
