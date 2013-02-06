@@ -1,10 +1,8 @@
-" folding for Markdown headers, both styles (atx- and setex-)
-" http://daringfireball.net/projects/markdown/syntax#header
-"
-" this code can be placed in file
-"   $HOME/.vim/after/ftplugin/markdown.vim
-"
+" folding for haproxy, completely based on markdown folding:
 " original version from Steve Losh's gist: https://gist.github.com/1038710
+"
+" Javi Polo <javipolo@drslump.org>
+" You can place this file in ~/.vim/after/ftplugin/haproxy.vim
 
 func! Foldexpr_haproxy(lnum)
     if (a:lnum == 1)
@@ -37,8 +35,7 @@ function! Foldtext_haproxy()
 " change the following fold options to your liking
 " see ':help fold-options' for more
 "setlocal foldenable
-setlocal foldlevel=0
-setlocal foldcolumn=0
+"setlocal foldlevel=0
+"setlocal foldcolumn=0
 set foldmethod=expr
 set foldopen-=search
-"set foldcolumn=3
